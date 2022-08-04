@@ -1,4 +1,5 @@
-// For Epic Games Weekly Games.
+// For Epic Games Weekly Countdown
+
 var curday;
 var secTime;
 var ticker;
@@ -61,5 +62,9 @@ if (curday == 1) {
 getSeconds()
 
 
+
+fetch('https://gamerpower.com/api/giveaways?platform=epic-games-store&type=game&sort-by=popularity')
+  .then((response) => response.json())
+  .then((data) => console.log(data));
 
 
